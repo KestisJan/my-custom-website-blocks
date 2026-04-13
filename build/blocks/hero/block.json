@@ -10,6 +10,10 @@
     "title": {
       "type": "string",
       "default": "Hello World"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#f3f4f6"
     }
   },
   "editorScript": "file:../../index.js"
