@@ -1,0 +1,11 @@
+{
+  "name": "my-custom-website-blocks",
+  "devDependencies": {
+    "@wordpress/scripts": "^31.8.0"
+  },
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "packages-update": "wp-scripts package-update"
+  }
+}
