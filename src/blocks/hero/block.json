@@ -1,0 +1,16 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "my-custom-site/hero",
+    "version": "0.1.0",
+    "title": "Main Hero",
+    "category": "design",
+    "icon": "cover-image",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Hello World"
+        }
+    },
+    "editorScript": "file:../../index.js"
+}
