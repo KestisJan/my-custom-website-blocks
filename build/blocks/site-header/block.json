@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "my-custom-site/site-header",
+  "version": "0.1.0",
+  "title": "Site Header",
+  "category": "design",
+  "icon": "heading",
+  "description": "A custom navigation header built with atoms.",
+  "attributes": {
+    "siteTitle": {
+      "type": "string",
+      "default": "MY Website"
+    }
+  },
+  "editorScript": "file:../../index.js"
+}
