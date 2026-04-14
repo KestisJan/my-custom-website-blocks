@@ -14,6 +14,14 @@
     "bgColor": {
       "type": "string",
       "default": "#f3f4f6"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Learn More"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
     }
   },
   "editorScript": "file:../../index.js"
