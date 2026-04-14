@@ -22,5 +22,15 @@ function kestas_register_custom_blocks() {
     if ( file_exists( __DIR__ . '/build/blocks/site-header' ) ) {
         register_block_type( __DIR__ . '/build/blocks/site-header' );
     }
+    
+    // Register Feature Grid 
+    if ( file_exists( __DIR__ . '/build/blocks/feature-grid' ) ) {
+        register_block_type( __DIR__ . '/build/blocks/feature-grid' );
+    }
+
+    // Register Feature Item
+    if ( file_exists( __DIR__ . '/build/blocks/feature-item')) {
+        register_block_type( __DIR__ . '/build/blocks/feature-item' );
+    }
 }
 add_action( 'init', 'kestas_register_custom_blocks' );
