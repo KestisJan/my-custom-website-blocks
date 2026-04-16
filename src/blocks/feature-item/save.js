@@ -1,10 +1,17 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function Save({ attributes }) {
+    const { title, description, mediaUrl } = attributes;
+
     return (
-        <div { ...useBlockProps.save({ className: 'feature-item-card' }) }>
-            <RichText.Content tagName="h3" value={ attributes.title } />
-            <RichText.Content tagName="p" value={ attributes.description } />
+        <div { ...useBlockProps.save( { className: 'feature-item-card' } ) }>
+            { mediaUrl && (
+                <div className='feature-item-icon'>
+                    <img src={ mediaUrl } alt='' />
+                </div>
+            ) }
+            <RichText.Content tagName="h3" value={ title }/>
+            <RichText.Content tagName='p' value={ description }/>
         </div>
     );
 }

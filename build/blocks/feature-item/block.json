@@ -5,6 +5,25 @@
   "version": "0.1.0",
   "title": "Feature Item",
   "category": "design",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h3"
+    },
+    "description": {
+      "type": "string",
+      "source": "html",
+      "selector": "p"
+    },
+    "mediaId": {
+      "type": "number"
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    }
+  },
   "parent": [
     "create-block/feature-grid"
   ],

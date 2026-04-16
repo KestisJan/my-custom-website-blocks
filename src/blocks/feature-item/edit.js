@@ -1,21 +1,41 @@
-import { useBlockProps, RichText } from '@wordpress/block-editor';
+import { useBlockProps, RichText, MediaUpload } from '@wordpress/block-editor';
+import { Button } from '@wordpress/components';
 
 export default function Edit({ attributes, setAttributes }) {
-    const { title, description } = attributes;
+    const { title, description, mediaUrl } = attributes;
+
+    const onSelectMedia = ( media ) => {
+        setAttributes({
+            mediaId: media.id,
+            mediaUrl: media.url
+        });
+    }
 
     return (
-        <div { ...useBlockProps({ className: 'feature-item-card' }) }>
+        <div {  ...useBlockProps({ className: 'feature-item-card' }) }>
+            <div className="feature-item-icon-wrapper">
+                <MediaUpload
+                    onSelect={ onSelectMedia }
+                    allowedTypes={ [ 'image' ] }
+                    value={ attributes.mediaId }
+                    render={ ({ open }) => (
+                        <Button onClick={ open } className={ ! mediaUrl ? 'is-primary' : 'image-button' }>
+                            { ! mediaUrl ? 'Upload Icon' : <img src={ mediaUrl } alt="Selected icon" /> }
+                        </Button>
+                    ) }
+                />
+            </div>
             <RichText
                 tagName="h3"
                 value={ title }
-                onChange={ (val) => setAttributes({ title: val }) }
+                onChange={ ( title ) => setAttributes( { title } )}
                 placeholder="Feature Title"
             />
             <RichText
-                tagName="p"
+                tagName='p'
                 value={ description }
-                onChange={ (val) => setAttributes({ description: val }) }
-                placeholder="Feature description goes here..."
+                onChange={ ( description ) => setAttributes( { description } )}
+                placeholder='Feature description goes here'
             />
         </div>
     );
