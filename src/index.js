@@ -15,10 +15,17 @@ import gridMetadata from './blocks/feature-grid/block.json';
 import GridEdit from './blocks/feature-grid/edit';
 import GridSave from './blocks/feature-grid/save';
 
+// Import Feature Grid Styles
+import './blocks/feature-grid/style.css';
+import './blocks/feature-grid/editor.css';
+
 // Import Feature Item
 import itemMetadata from './blocks/feature-item/block.json';
 import ItemEdit from './blocks/feature-item/edit';
 import ItemSave from './blocks/feature-item/save';
+
+// Import Feature Item Styles
+import './blocks/feature-item/style.css';
 
 // --- Register Blocks ---
 

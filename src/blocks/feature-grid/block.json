@@ -6,5 +6,7 @@
     "title": "Feature Grid",
     "category": "design",
     "supports": { "align": [ "wide", "full" ] },
-    "editorScript": "file:./index.js"
+    "editorScript": "file:./index.js",
+    "style": "file:../../style-index.css",
+    "editorStyle": "file:../../index.css"
 }

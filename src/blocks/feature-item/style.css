@@ -1,0 +1,25 @@
+.feature-item-card {
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards in a row are same height */
+}
+
+/* Hover effect to make it feel interactice */
+.feature-item-card:hover {
+    border-color: #007cba;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-5px);
+}
+
+.feature-item-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #1a202c;
+}

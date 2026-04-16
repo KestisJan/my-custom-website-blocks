@@ -1,0 +1,27 @@
+.feature-grid-frontend {
+    display: grid;
+    /* This creates 3 equal columns on desktop */
+    grid-template-columns: repeat(3, 1);
+    gap: 40px;
+    margin: 50px 0;
+}
+
+/* Responsive: Stack them on mobile  */
+@media (max-width: 768px) {
+    .feature-grid-frontend {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-item-card {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3 ease;
+}
+
+.feature-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
