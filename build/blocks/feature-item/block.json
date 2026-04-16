@@ -22,6 +22,18 @@
     "mediaUrl": {
       "type": "string",
       "default": ""
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Learn More"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#ffffff"
     }
   },
   "parent": [

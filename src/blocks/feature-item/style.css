@@ -6,17 +6,17 @@
     justify-content: center;
     text-align: center;
 
-    /* Sizing */
+    /* Sizing - Increased for a "bigger" look */
     width: 100%;
-    min-height: 200px;
-    padding: 30px;
+    min-height: 350px; 
+    padding: 50px 30px;
     box-sizing: border-box;
 
     /* Visuals */
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    transition: all 0.3 ease;
+    border-radius: 16px; /* Slightly rounder for modern feel */
+    transition: all 0.3s ease; /* Fixed: was missing 's' in your snippet */
 }
 
 /* Interaction */
@@ -26,20 +26,7 @@
     transform: translateY(-5px);
 }
 
-.feature-item-card h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-    color: #1a202c;
-}
-
-.feature-item-card p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #4a5568;
-}
-
+/* Icon Container */
 .feature-item-icon {
     margin-bottom: 25px;
     width: 80px;
@@ -53,4 +40,53 @@
     max-width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+/* Typography */
+.feature-item-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8rem; /* Slightly larger */
+    color: #1a202c;
+    font-weight: 700;
+}
+
+.feature-item-card p {
+    margin: 0;
+    font-size: 1.1rem; /* Slightly larger */
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+/* --- NEW: Button Styling --- */
+.feature-card-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 32px;
+    background-color: #007cba;
+    color: #ffffff !important; /* Forces white text even if theme tries to change it */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.feature-card-button:hover {
+    background-color: #005a87;
+    text-decoration: none;
+}
+
+/* Editor-only helper: Styles the URL input box so it's clean */
+.url-input-container {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.url-input-container input[type="text"] {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
 }

@@ -9,7 +9,11 @@
         "title": { "type": "string", "source": "html", "selector": "h3"},
         "description": { "type": "string", "source": "html", "selector": "p"},
         "mediaId": { "type": "number" },
-        "mediaUrl": { "type": "string", "default": "" }
+        "mediaUrl": { "type": "string", "default": "" },
+        "buttonText": { "type": "string", "default": "Learn More" },
+        "buttonUrl": { "type": "string", "default": "" },
+        "backgroundColor": { "type": "string", "default": "#ffffff" }
+
     },
     "parent": [ "create-block/feature-grid" ],
     "editorScript": "file:../../index.js",

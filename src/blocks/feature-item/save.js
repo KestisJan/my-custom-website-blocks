@@ -1,10 +1,13 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function Save({ attributes }) {
-    const { title, description, mediaUrl } = attributes;
+    const { title, description, mediaUrl, backgroundColor } = attributes;
 
     return (
-        <div { ...useBlockProps.save( { className: 'feature-item-card' } ) }>
+        <div { ...useBlockProps.save( { 
+            className: 'feature-item-card',
+            style: { backgroundColor: backgroundColor }
+            } ) }>
             { mediaUrl && (
                 <div className='feature-item-icon'>
                     <img src={ mediaUrl } alt='' />
