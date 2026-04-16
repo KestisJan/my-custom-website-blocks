@@ -1,20 +1,46 @@
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { 
+    useBlockProps,
+    InnerBlocks,
+    InspectorControls
+} from '@wordpress/block-editor';
 
-export default function Edit() {
-    // This template automatically creates 3 items when you first drop the block
-    const TEMPLATE = [
-        [ 'create-block/feature-item', {} ],
-        [ 'create-block/feature-item', {} ],
-        [ 'create-block/feature-item', {} ],
-    ];
+import {
+    PanelBody,
+    RangeControl
+} from '@wordpress/components';
+
+export default function Edit( { attributes, setAttributes  } ) {
+    const { columns } = attributes;
+
+    // Dynamic style to update the grid in the editor
+    const blockProps = useBlockProps({
+        className: `feature-grid-admin`,
+        style: {
+            gridTemplateColumns: `repeat(${columns}, 1fr)`
+        }
+    });
 
     return (
-        <div { ...useBlockProps({ className: 'feature-grid-layout' } )}>
-            <InnerBlocks 
-                allowedBlocks={ [ 'create-block/feature-item' ] }
-                template={ TEMPLATE }
-                orientation='horizontal'
-            />
-        </div>
+        <>
+            <InspectorControls>
+                <PanelBody title="Grid Settings">
+                    <RangeControl
+                        label="Columns"
+                        value={ columns }
+                        onChange={ ( columns ) => setAttributes( { columns } )}
+                        min={ 1 }
+                        max={ 6 }
+                    />
+                </PanelBody>
+            </InspectorControls>
+
+            <div {...blockProps }>
+                <InnerBlocks
+                    allowedBlocks={ [ 'create-block/feature-item' ] }
+                    template={ [ [ 'create-block/feature-item' ], [ 'create-block/feature-item' ], [ 'create-block/feature-item' ] ] }
+                    orientation='horizontal'
+                />
+            </div>
+        </>
     )
 }

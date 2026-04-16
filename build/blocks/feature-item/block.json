@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": "3",
+  "apiVersion": 3,
   "name": "create-block/feature-item",
   "version": "0.1.0",
   "title": "Feature Item",
@@ -8,19 +8,7 @@
   "parent": [
     "create-block/feature-grid"
   ],
-  "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Service Name"
-    },
-    "description": {
-      "type": "string",
-      "default": "Short description"
-    }
-  },
-  "supports": {
-    "html": "false"
-  },
-  "editorScript": "file:./index.js",
-  "style": "file:./style.css"
+  "editorScript": "file:../../index.js",
+  "style": "file:../../style-index.css",
+  "editorStyle": "file:../../index.css"
 }

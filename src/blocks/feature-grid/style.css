@@ -1,9 +1,16 @@
 .feature-grid-frontend {
     display: grid;
-    /* This creates 3 equal columns on desktop */
-    grid-template-columns: repeat(3, 1);
-    gap: 40px;
-    margin: 50px 0;
+    grid-template-columns: repeat(3, 1fr);
+    
+    /* Layout */
+    width: 100%;
+    max-width: 1400px;
+    margin: 50px auto;
+    gap: 30px;
+    padding: 0 20px;
+    /* This ensures the columns are distributed evenly */
+    justify-content: center;
+    justify-items: stretch;
 }
 
 /* Responsive: Stack them on mobile  */
