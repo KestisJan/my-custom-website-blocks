@@ -20,6 +20,26 @@
     }
 }
 
+/* Tablet & Mobile Optimization */
+@media (max-width: 768px) {
+    .feature-grid-frontend {
+        /* Force 1 column regardless of the slider setting */
+        grid-template-columns: 1fr !important;
+
+        /* Reduce the gap so it looks tigther on small screens */
+        gap: 20px;
+
+        /* Adjust vertical spacing */
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .feature-item-card {
+        /* Reduce padding inside the cards for mobile */
+        padding: 40px 20px;
+        min-height: auto; 
+    }
+}
 .feature-item-card {
     padding: 20px;
     border: 1px solid #eee;
