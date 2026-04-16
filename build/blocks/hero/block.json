@@ -2,27 +2,33 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "my-custom-site/hero",
-  "version": "0.1.0",
-  "title": "Main Hero",
-  "category": "design",
-  "icon": "cover-image",
+  "title": "Hero Section",
+  "category": "layout",
   "attributes": {
     "title": {
       "type": "string",
-      "default": "Hello World"
+      "default": "Building the Future"
     },
-    "bgColor": {
+    "subText": {
       "type": "string",
-      "default": "#f3f4f6"
+      "default": "Your subtitle goes here."
     },
-    "buttonText": {
-      "type": "string",
-      "default": "Learn More"
+    "bgImageUrl": {
+      "type": "string"
     },
-    "buttonUrl": {
-      "type": "string",
-      "default": "#"
+    "overlayOpacity": {
+      "type": "number",
+      "default": 40
     }
   },
-  "editorScript": "file:../../index.js"
+  "supports": {
+    "align": [
+      "full",
+      "wide"
+    ],
+    "html": false
+  },
+  "editorScript": "file:../../index.js",
+  "editorStyle": "file:../../index.css",
+  "style": "file:./style.css"
 }

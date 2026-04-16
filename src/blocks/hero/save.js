@@ -1,13 +1,23 @@
-import { useBlockProps, RichText } from '@wordpress/block-editor';
-import ActionButton from '../../components/ActionButton';
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 
-export default function Save({ attributes }) {
-    const { title, bgColor } = attributes;
+export default function Save( { attributes } ) {
+    const { title, subText, bgImageUrl, overlayOpacity } = attributes;
 
     return (
-        <div { ...useBlockProps.save( { style: { backgroundColor: bgColor, padding: '100px 20px' } }) }>
-            <RichText.Content tagName='h1' value={ title } />
-            <ActionButton text={ attributes.buttonText } url={ attributes.buttonUrl } />
+        <div { ...useBlockProps.save({
+            className: 'hero-section',
+            style: { backgroundImage: bgImageUrl ? `url(${bgImageUrl})` : 'none'}
+        })}>
+            <div
+                className="hero-overlay"
+                style={{ backgroundColor: `rgba(0, 0, 0, ${ overlayOpacity / 100}` }}
+            />
+            <div className="hero-container">
+                <div className="hero-content">
+                    <RichText.Content tagName="h1" value={ title } />
+                    <RichText.Content tagName="p" value={ subText } />
+                </div>
+            </div>
         </div>
     )
 }
